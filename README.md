@@ -20,13 +20,13 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 
 Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do programa. Cada link leva diretamente para a pasta contendo a documentação detalhada, códigos utilizados e evidências de sucesso:
 
-### 🔹 [Lab 01: Explorando a AWS com o Amazon EC2](./labs/01-amazon-ec2)
-* **Descrição:** Provisionamento de servidores virtuais (instâncias EC2) utilizando o Console de Gerenciamento da AWS e automação via AWS CLI no CloudShell.
-* **Destaques:** Configuração de firewalls virtuais (Security Groups) e uso de scripts de *User Data* para inicialização automatizada do servidor web Apache (`httpd`).
+## 📂 Índice de Laboratórios
 
-### 🔹 [Lab 02: Gestão de Custos com AWS Budgets](./labs/02-aws-budgets)
-* **Descrição:** Implementação de conceitos de FinOps para controle proativo de custos em ambientes de desenvolvimento.
-* **Destaques:** Criação de tetos orçamentários personalizados e configuração de gatilhos de alerta integrados com o Amazon SNS para envio de notificações automáticas por e-mail.
+Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do programa. Cada link leva diretamente para a pasta contendo a documentação detalhada:
+
+🔹 **[Lab 01: Amazon EC2](./labs/01-amazon-ec2)** — Automação de instâncias e servidores web Apache.
+
+🔹 **[Lab 02: AWS Budgets](./labs/02-aws-budgets)** — Governança financeira e alertas proativos com SNS.
 
 ---
 
