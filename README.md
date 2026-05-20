@@ -18,10 +18,6 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 
 ## 📂 Índice de Laboratórios
 
-Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do programa. Cada link leva diretamente para a pasta contendo a documentação detalhada, códigos utilizados e evidências de sucesso:
-
-## 📂 Índice de Laboratórios
-
 Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do programa. Cada link leva diretamente para a pasta contendo a documentação detalhada:
 
 🔹 **[Lab 01: Amazon EC2](./labs/01-amazon-ec2)** — Automação de instâncias e servidores web Apache.
