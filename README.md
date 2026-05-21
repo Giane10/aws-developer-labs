@@ -24,6 +24,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 02: AWS Budgets](./labs/02-aws-budgets)** — Governança financeira e alertas proativos com SNS.
 
+🔹 **[Lab 03: Automação Serverless](./labs/03-automated-ec2-cleanup)** — Automatizando o fim de instâncias EC2 com Lambda em Python e EventBridge.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
