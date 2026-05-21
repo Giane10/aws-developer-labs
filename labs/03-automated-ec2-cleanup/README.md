@@ -17,21 +17,25 @@ O fluxo de execução segue o modelo de microsserviços integrados de forma nati
 
 ### 1. Perímetro de Segurança: Política IAM Customizada
 Configuração estrita seguindo o princípio do privilégio mínimo (*least privilege*), liberando apenas as chamadas necessárias para a automação listar e derrubar os servidores.
+
 ![Política IAM Customizada](politica-terminar-ec2-GianeCosta.png)
 *Legenda: Print comprovando a criação da política IAM customizada, configurada estritamente com as permissões `ec2:DescribeInstances` e `ec2:TerminateInstances`. O nome da usuária (GianeCosta) está visível tanto no nome da política quanto na console.*
 
 ### 2. Identidade de Execução: Função IAM (Role)
 Criação do perfil de segurança que permite ao serviço serverless assumir temporariamente os poderes de gerenciamento de infraestrutura.
+
 ![Função IAM de Execução](role-terminar-ec2-GianeCosta.png)
 *Legenda: Print validando a criação da Função IAM (Role) para execução do serviço AWS Lambda. A Role 'RoleTerminarEC2-GianeCosta' está vinculada com sucesso à política customizada criada anteriormente.*
 
 ### 3. Integração de Arquitetura: Gatilho EventBridge
 Configuração do agendamento automatizado baseado em tempo por meio de expressões de programação.
+
 ![Gatilho EventBridge](gatilho-eventbridge-GianeCosta.png)
 *Legenda: Visão geral da arquitetura serverless no console da AWS Lambda. O print comprova a vinculação bem-sucedida do Amazon EventBridge (CloudWatch Events) como gatilho de execução automatizada para a função LambdaTerminarEC2-gianecosta.*
 
 ### 4. Inteligência da Automação: Código AWS Lambda em Python
 Desenvolvimento do script em Python utilizando o SDK oficial `boto3` para varrer as regiões de infraestrutura e orquestrar o desligamento.
+
 ![Código AWS Lambda em Python](lambda-terminar-ec2-GianeCosta.png)
 *Legenda: Print final validando a criação da função AWS Lambda serverless. O ecrã confirma o nome da função (LambdaTerminarEC2-gianecosta), o código Python com a lógica 'Terminator.py' e as regiões AWS configuradas, pronto para execução automática.*
 
