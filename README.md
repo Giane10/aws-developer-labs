@@ -1,14 +1,15 @@
 
 # AWS Developer - Laboratórios Práticos ☁️🚀
 
-Bem-vindo(a) ao meu repositório de laboratórios práticos da trilha **AWS Developer**, realizados em parceria com a **Escola da Nuvem** sob a orientação do professor **Rafael Silva Willians**.
+Bem-vindo(a) ao meu repositório de laboratórios práticos da trilha AWS Developer, realizados em parceria com a Escola da Nuvem sob a orientação do professor Rafael Silva Willians.
 
-O objetivo deste repositório é consolidar o meu aprendizado em computação em nuvem, documentando a implementação de arquiteturas, automação de infraestrutura, práticas de DevOps e governança financeira (FinOps) no ambiente Amazon Web Services.
+O objetivo deste repositório é consolidar o meu aprendizado em computação em nuvem, documentando a implementação de arquiteturas, automação de infraestrutura, práticas de DevOps, modelagem de dados e governança financeira (FinOps) no ambiente Amazon Web Services.
 
 ---
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
 * **Provedor de Nuvem:** Amazon Web Services (AWS)
+* **Banco de Dados:** Amazon DynamoDB (NoSQL)
 * **Infraestrutura e Automação:** AWS CLI, CloudShell, User Data Scripts
 * **Segurança e Governança:** Security Groups, AWS Budgets
 * **Mensageria:** Amazon SNS (Simple Notification Service)
@@ -17,7 +18,6 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 ---
 
 ## 📂 Índice de Laboratórios
-
 Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do programa. Cada link leva diretamente para a pasta contendo a documentação detalhada:
 
 🔹 **[Lab 01: Amazon EC2](./labs/01-amazon-ec2)** — Automação de instâncias e servidores web Apache.
@@ -26,18 +26,20 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 03: Automação Serverless](./labs/03-automated-ec2-cleanup)** — Automatizando o fim de instâncias EC2 com Lambda em Python e EventBridge.
 
+🔹 **[Lab 07: Amazon DynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
 Ao longo do desenvolvimento destes laboratórios, venho aprimorando competências essenciais para a atuação como Engenheira de Nuvem / DevOps, tais como:
-1. **Automação de Infraestrutura:** Substituição de processos manuais por comandos replicáveis via CLI, reduzindo erros humanos.
-2. **Mentalidade FinOps:** Entendimento de que a arquitetura em nuvem ideal deve ser eficiente, segura e, acima de tudo, financeiramente sustentável.
-3. **Segurança em Camadas:** Configuração estrita de acessos e perímetros de rede para proteger recursos e dados expostos à internet.
+* **Automação de Infraestrutura:** Substituição de processos manuais por comandos replicáveis via CLI e gerenciamento de arquivos via CloudShell, reduzindo erros humanos.
+* **Modelagem NoSQL Eficiente:** Criação de tabelas e otimização de consultas em bancos de dados utilizando estratégias de indexação por chaves (LSI e GSI) para redução de custos (RCUs).
+* **Mentalidade FinOps:** Entendimento de que a arquitetura em nuvem ideal deve ser eficiente, segura e, acima de tudo, financeiramente sustentável.
+* **Segurança em Camadas:** Configuração estrita de acessos e perímetros de rede para proteger recursos e dados expostos à internet.
 
 ---
 
 ## 👩‍💻 Conecte-se Comigo
 Se você quiser acompanhar a minha transição de carreira para o setor de tecnologia ou trocar ideias sobre o ecossistema AWS:
-
-* **LinkedIn:** [https://www.linkedin.com/in/giane-costa/]
-* **GitHub:** [https://github.com/Giane10]
+* **LinkedIn:** [giane-costa](https://www.linkedin.com/in/giane-costa/)
+* **GitHub:** [Giane10](https://github.com/Giane10)
