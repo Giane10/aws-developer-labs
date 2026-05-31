@@ -12,7 +12,7 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 * **Banco de Dados:** Amazon DynamoDB (NoSQL)
 * **Infraestrutura e Automação:** AWS CLI, CloudShell, User Data Scripts
 * **Segurança e Governança:** Security Groups, AWS Budgets
-* **Mensageria:** Amazon SNS (Simple Notification Service)
+* **Mensageria e Integração:** Amazon SNS (Simple Notification Service), Amazon SQS (Simple Queue Service)
 * **Documentação:** Markdown, Git, GitHub
 
 ---
@@ -26,13 +26,16 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 03: Automação Serverless](./labs/03-automated-ec2-cleanup)** — Automatizando o fim de instâncias EC2 com Lambda em Python e EventBridge.
 
-🔹 **[Lab 07: Amazon dynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
+🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tolerância a falhas.
+
+🔹 **[Lab 07: Amazon DynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
 
 ---
 
 ## 🧠 Aprendizados Consolidados
 Ao longo do desenvolvimento destes laboratórios, venho aprimorando competências essenciais para a atuação como Engenheira de Nuvem / DevOps, tais como:
 * **Automação de Infraestrutura:** Substituição de processos manuais por comandos replicáveis via CLI e gerenciamento de arquivos via CloudShell, reduzindo erros humanos.
+* **Arquiteturas Desacopladas:** Implementação de padrões de integração assíncrona (Fanout) e isolamento de falhas em microsserviços garantindo a resiliência do sistema.
 * **Modelagem NoSQL Eficiente:** Criação de tabelas e otimização de consultas em bancos de dados utilizando estratégias de indexação por chaves (LSI e GSI) para redução de custos (RCUs).
 * **Mentalidade FinOps:** Entendimento de que a arquitetura em nuvem ideal deve ser eficiente, segura e, acima de tudo, financeiramente sustentável.
 * **Segurança em Camadas:** Configuração estrita de acessos e perímetros de rede para proteger recursos e dados expostos à internet.
