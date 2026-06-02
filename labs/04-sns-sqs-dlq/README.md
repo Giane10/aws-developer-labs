@@ -6,6 +6,9 @@ Este laboratório documenta a implementação de uma arquitetura de mensageria a
 ---
 
 ## 🏗️ Arquitetura e Fluxo de Mensagens
+
+![Arquitetura do Sistema](arquitetura.png)
+
 O cenário simula um sistema de e-commerce ou aplicação distribuída onde um microsserviço (Publicador) precisa notificar outros serviços (Assinantes) sobre um evento importante, como a criação de um novo pedido.
 
 1. **Publicação (Amazon SNS):** O evento é enviado para um Tópico SNS (barramento central).
