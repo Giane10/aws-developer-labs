@@ -12,7 +12,8 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 * **Banco de Dados:** Amazon DynamoDB (NoSQL)
 * **Infraestrutura e Automação:** AWS CLI, CloudShell, User Data Scripts
 * **Segurança e Governança:** Security Groups, AWS Budgets
-* **Mensageria e Integração:** Amazon SNS (Simple Notification Service), Amazon SQS (Simple Queue Service)
+* **Mensageria e Integração:** Amazon SNS (Simple Notification Service), Amazon SQS (Simple Queue Service), Amazon API Gateway
+* **Computação Serverless:** AWS Lambda (Python)
 * **Documentação:** Markdown, Git, GitHub
 
 ---
@@ -28,6 +29,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tolerância a falhas.
 
+🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão em arquiteturas serverless.
+
 🔹 **[Lab 07: Amazon DynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
 
 ---
@@ -35,6 +38,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 ## 🧠 Aprendizados Consolidados
 Ao longo do desenvolvimento destes laboratórios, venho aprimorando competências essenciais para a atuação como Engenheira de Nuvem / DevOps, tais como:
 * **Automação de Infraestrutura:** Substituição de processos manuais por comandos replicáveis via CLI e gerenciamento de arquivos via CloudShell, reduzindo erros humanos.
+* **Ciclo de Vida Serverless:** Implementação de estratégias seguras de implantação contínua (CI/CD) utilizando ponteiros lógicos (Stages e Aliases) para isolar tráfegos de desenvolvimento e produção sem duplicar recursos físicos.
 * **Arquiteturas Desacopladas:** Implementação de padrões de integração assíncrona (Fanout) e isolamento de falhas em microsserviços garantindo a resiliência do sistema.
 * **Modelagem NoSQL Eficiente:** Criação de tabelas e otimização de consultas em bancos de dados utilizando estratégias de indexação por chaves (LSI e GSI) para redução de custos (RCUs).
 * **Mentalidade FinOps:** Entendimento de que a arquitetura em nuvem ideal deve ser eficiente, segura e, acima de tudo, financeiramente sustentável.
