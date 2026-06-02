@@ -8,6 +8,7 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 ---
 
 ## 🛠️ Tecnologias e Ferramentas Utilizadas
+
 * **Provedor de Nuvem:** Amazon Web Services (AWS)
 * **Banco de Dados:** Amazon DynamoDB (NoSQL)
 * **Infraestrutura e Automação:** AWS CLI, CloudShell, User Data Scripts
