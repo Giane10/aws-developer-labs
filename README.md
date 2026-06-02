@@ -51,3 +51,4 @@ Ao longo do desenvolvimento destes laboratórios, venho aprimorando competência
 Se você quiser acompanhar a minha transição de carreira para o setor de tecnologia ou trocar ideias sobre o ecossistema AWS:
 * **LinkedIn:** [giane-costa](https://www.linkedin.com/in/giane-costa/)
 * **GitHub:** [Giane10](https://github.com/Giane10)
+
