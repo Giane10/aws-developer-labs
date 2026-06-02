@@ -59,7 +59,7 @@ Este laboratório fixou conceitos fundamentais cobrados com alta frequência no 
 
 ## 📄 Documentação Acadêmica
 Se você deseja visualizar o relatório detalhado com os prints e as diretrizes institucionais do laboratório, acesse:
-📎 [Clique aqui para visualizar o PDF do Entregável Completo](./Lab_AWS_Lambda_e_API_Gateway_GianeCosta.pdf)
+📎 [Clique aqui para visualizar o PDF do Entregável Completo](./Lab5_AWS_Lambda_e_API_Gateway_GianeCosta.pdf)
 
 ---
 
