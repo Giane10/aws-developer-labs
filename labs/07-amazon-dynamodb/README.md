@@ -1,4 +1,4 @@
-# Laboratório 04: Modelagem NoSQL e Otimização de Consultas com Amazon DynamoDB
+# Laboratório 07: Modelagem NoSQL e Otimização de Consultas com Amazon DynamoDB
 
 ## 📝 Descrição do Projeto
 Este laboratório prático teve como foco o desenho de tabelas NoSQL eficientes e a otimização de consultas utilizando o Amazon DynamoDB. O cenário envolveu o provisionamento de uma tabela de pedidos para uma empresa fictícia, a criação de Índices Secundários Locais (LSI) e Globais (GSI) para viabilizar diferentes padrões de busca, e a ingestão automatizada de dados em lote (batch) através da interface nativa do console da AWS.
