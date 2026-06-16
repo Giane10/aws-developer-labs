@@ -37,6 +37,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 07: Amazon DynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
 
+🔹 **[Lab 08: AWS SSM Parameter Store e KMS](./labs/08-ssm-parameter-store-kms)** — Gerenciamento centralizado de variáveis de ambiente e segredos, utilizando chaves customizadas para criptografia em repouso e consumo via CLI.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -53,6 +55,7 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 🛡️ **Segurança, Automação & FinOps**
 * **Infraestrutura Automatizada:** Uso de comandos replicáveis via AWS CLI em substituição a processos manuais.
 * **Segurança em Camadas:** Restrição estrita de acessos através de *Bucket Policies* e *Security Groups*.
+* **Gerenciamento de Segredos (DevSecOps):** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
 * **Governança de Custos:** Monitoramento proativo para uma nuvem financeiramente sustentável e eficiente.
 
 ---
