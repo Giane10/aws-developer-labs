@@ -1,4 +1,3 @@
-
 # AWS Developer - Laboratórios Práticos ☁️🚀
 
 Bem-vindo(a) ao meu repositório de laboratórios práticos da trilha AWS Developer, realizados em parceria com a Escola da Nuvem sob a orientação do professor Rafael Silva Willians.
@@ -14,8 +13,9 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 | **☁️ Cloud & Serverless** | AWS, AWS Lambda (Python) |
 | **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3 |
 | **🌐 Redes & Integração** | Amazon API Gateway, Amazon SNS, Amazon SQS |
-| **🛡️ Segurança & FinOps** | IAM, Security Groups, Políticas de S3, AWS Budgets |
-| **⚙️ Infraestrutura** | AWS CLI, CloudShell, User Data Scripts |
+| **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, IAM, Security Groups, Políticas de S3, AWS Budgets |
+| **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics) |
+| **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng` |
 | **💻 Versionamento** | Git, GitHub, Markdown |
 
 ---
@@ -39,6 +39,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 08: AWS SSM Parameter Store e KMS](./labs/08-ssm-parameter-store-kms)** — Gerenciamento centralizado de variáveis de ambiente e segredos, utilizando chaves customizadas para criptografia em repouso e consumo via CLI.
 
+🔹 **[Lab 09: Monitoramento, Alertas e Auditoria](./labs/09-cloudwatch-cloudtrail-monitoring)** — Implementação de observabilidade com alarmes estáticos no Amazon CloudWatch e notificações via Amazon SNS integrados a uma trilha de auditoria contínua via AWS CloudTrail armazenada no Amazon S3.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -52,11 +54,12 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 * **Aplicações Modernas:** Hospedagem estática no S3 e configuração de políticas de CORS no API Gateway.
 * **Modelagem NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs).
 
-🛡️ **Segurança, Automação & FinOps**
-* **Infraestrutura Automatizada:** Uso de comandos replicáveis via AWS CLI em substituição a processos manuais.
-* **Segurança em Camadas:** Restrição estrita de acessos através de *Bucket Policies* e *Security Groups*.
-* **Gerenciamento de Segredos (DevSecOps):** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
-* **Governança de Custos:** Monitoramento proativo para uma nuvem financeiramente sustentável e eficiente.
+📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
+* **Monitoramento Proativo:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) para acionar respostas automáticas a incidentes.
+* **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
+* **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
+* **Gerenciamento de Segredos:** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
+* **Governança de Custos (FinOps):** Monitoramento financeiro proativo para manutenção de uma nuvem sustentável e eficiente.
 
 ---
 
@@ -64,4 +67,3 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 Se você quiser acompanhar a minha transição de carreira para o setor de tecnologia ou trocar ideias sobre o ecossistema AWS:
 * **LinkedIn:** [giane-costa](https://www.linkedin.com/in/giane-costa/)
 * **GitHub:** [Giane10](https://github.com/Giane10)
-
