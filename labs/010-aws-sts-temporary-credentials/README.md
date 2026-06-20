@@ -9,6 +9,8 @@ Durante o laboratório, foi criada uma role IAM customizada com acesso temporár
 
 ## 🏗️ Arquitetura e Fluxo do Laboratório
 
+![AWS Security Token Service (STS)](arquitetura10.png)
+
 1. **Criação da Role IAM:** Provisionamento de uma Role temporária atrelada a uma política de confiança personalizada e permissão restrita (`AmazonS3FullAccess`).
 2. **Geração de Token (Python + Boto3):** Execução de script automatizado via AWS CloudShell consumindo a API do AWS STS para solicitar credenciais efêmeras.
 3. **Configuração da AWS CLI:** Injeção manual das chaves temporárias (`Access Key ID`, `Secret Access Key` e `Session Token`) no ambiente local do terminal.
@@ -33,17 +35,17 @@ Durante o laboratório, foi criada uma role IAM customizada com acesso temporár
 ### 1. Geração de Credenciais Temporárias via Python & STS
 Execução do script Python consumindo a API do STS para gerar chaves criptográficas de sessão com tempo de expiração delimitado em 3600 segundos (1 hora).
 
-![Geração de Credenciais Temporárias](img/01.png)
+![Geração de Credenciais Temporárias](01.png)
 
 ### 2. Validação da Identidade Assumida na AWS CLI
 Execução do comando de auditoria de chamadas demonstrando a transição bem-sucedida da identidade do usuário original para o escopo restrito da Role Temporária.
 
-![Identidade da Role Ativa](img/02.png)
+![Identidade da Role Ativa](02.png)
 
 ### 3. Teste de Resiliência Securitária (Relação de Confiança)
 Evidência do bloqueio de chamadas à API e retorno de erro de Acesso Negado (Access Denied) após a modificação intencional da política de confiança (Trust Relationship) da Role, validando os mecanismos de controle de acesso do IAM.
 
-![Acesso Negado via STS](img/03.png)
+![Acesso Negado via STS](03.png)
 
 ---
 
