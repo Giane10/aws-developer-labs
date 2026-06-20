@@ -13,9 +13,9 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 | **☁️ Cloud & Serverless** | AWS, AWS Lambda (Python) |
 | **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3 |
 | **🌐 Redes & Integração** | Amazon API Gateway, Amazon SNS, Amazon SQS |
-| **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, IAM, Security Groups, Políticas de S3, AWS Budgets |
+| **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, AWS STS, IAM (Roles/Policies), Security Groups, Políticas de S3, AWS Budgets |
 | **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics) |
-| **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng` |
+| **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng`, Boto3 SDK |
 | **💻 Versionamento** | Git, GitHub, Markdown |
 
 ---
@@ -31,7 +31,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tolerância a falhas.
 
-🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão em arquiteturas serverless.
+🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão in arquiteturas serverless.
 
 🔹 **[Lab 06: Aplicação Web Serverless](./labs/06-jogo-adivinhacao-aws-serverless)** — Integração ponta a ponta de um jogo de adivinhação web utilizando frontend estático no Amazon S3 acoplado a um backend dinâmico com API Gateway e AWS Lambda.
 
@@ -40,6 +40,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 🔹 **[Lab 08: AWS SSM Parameter Store e KMS](./labs/08-ssm-parameter-store-kms)** — Gerenciamento centralizado de variáveis de ambiente e segredos, utilizando chaves customizadas para criptografia em repouso e consumo via CLI.
 
 🔹 **[Lab 09: Monitoramento, Alertas e Auditoria](./labs/09-cloudwatch-cloudtrail-monitoring)** — Implementação de observabilidade com alarmes estáticos no Amazon CloudWatch e notificações via Amazon SNS integrados a uma trilha de auditoria contínua via AWS CloudTrail armazenada no Amazon S3.
+
+🔹 **[Lab 10: AWS Security Token Service (STS)](./labs/010-aws-sts-temporary-credentials)** — Provisionamento e gerenciamento de credenciais temporárias efêmeras com Python/Boto3, assunção de papéis (Roles) e validação de políticas de confiança (Trust Relationships) sob o princípio do privilégio mínimo.
 
 ---
 
@@ -55,6 +57,8 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 * **Modelagem NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs).
 
 📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
+* **Gerenciamento de Identidades Dinâmico:** Utilização do AWS STS para reduzir superfícies de ataque através do uso de tokens e chaves temporárias programáticas em substituição a credenciais de longo prazo estáticas.
+* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) em formato JSON para delimitar restritamente quais identidades podem assumir funções executivas.
 * **Monitoramento Proativo:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) para acionar respostas automáticas a incidentes.
 * **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
 * **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
