@@ -10,12 +10,12 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 
 | Categoria | Ferramentas |
 | :--- | :--- |
-| **☁️ Cloud & Serverless** | AWS, AWS Lambda (Python) |
+| **☁️ Cloud & Serverless** | AWS, AWS Lambda (Python), AWS Elastic Beanstalk |
 | **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3 |
 | **🌐 Redes & Integração** | Amazon API Gateway, Amazon SNS, Amazon SQS |
 | **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, AWS STS, IAM (Roles/Policies), Security Groups, Políticas de S3, AWS Budgets |
-| **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics) |
-| **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng`, Boto3 SDK |
+| **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics, Health Checks) |
+| **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng`, Boto3 SDK, AWS CloudFormation |
 | **💻 Versionamento** | Git, GitHub, Markdown |
 
 ---
@@ -31,7 +31,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tolerância a falhas.
 
-🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão in arquiteturas serverless.
+🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão em arquiteturas serverless.
 
 🔹 **[Lab 06: Aplicação Web Serverless](./labs/06-jogo-adivinhacao-aws-serverless)** — Integração ponta a ponta de um jogo de adivinhação web utilizando frontend estático no Amazon S3 acoplado a um backend dinâmico com API Gateway e AWS Lambda.
 
@@ -43,6 +43,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 10: AWS Security Token Service (STS)](./labs/010-aws-sts-temporary-credentials)** — Provisionamento e gerenciamento de credenciais temporárias efêmeras com Python/Boto3, assunção de papéis (Roles) e validação de políticas de confiança (Trust Relationships) sob o princípio do privilégio mínimo.
 
+🔹 **[Lab 11: AWS Elastic Beanstalk](./labs/11-aws-elastic-beanstalk-deployment)** — Provisionamento, gerenciamento e orquestração automatizada de aplicações web em modelo PaaS, controlando perfis de instância IAM e ciclo de vida de recursos.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -51,6 +53,7 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 ⚙️ **Arquitetura & Computação**
 * **Ciclo de Vida Serverless:** Isolamento lógico de ambientes (Dev/Prod) utilizando *Stages* e *Aliases*, sem duplicar recursos físicos.
 * **Sistemas Desacoplados:** Aplicação de padrões de integração assíncrona (como *Fanout*) para alta resiliência.
+* **Abstração de Infraestrutura (PaaS):** Compreensão de como o AWS Elastic Beanstalk otimiza o tempo de deploy de aplicações (como Node.js), isolando servidores web em ambientes single instance com foco em eficiência operacional.
 
 🌐 **Integração Web & Dados**
 * **Aplicações Modernas:** Hospedagem estática no S3 e configuração de políticas de CORS no API Gateway.
@@ -58,8 +61,9 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 
 📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
 * **Gerenciamento de Identidades Dinâmico:** Utilização do AWS STS para reduzir superfícies de ataque através do uso de tokens e chaves temporárias programáticas em substituição a credenciais de longo prazo estáticas.
-* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) em formato JSON para delimitar restritamente quais identidades podem assumir funções executivas.
-* **Monitoramento Proativo:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) para acionar respostas automáticas a incidentes.
+* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) em formato JSON para delimitar restritamente quais identidades podem assumir funções executivas, incluindo perfis de instâncias EC2 acoplados a plataformas de deploy.
+* **Orquestração Subjacente:** Rastreabilidade e análise dos bastidores de provisionamento automatizado de recursos (Security Groups, EC2 e Elastic IPs) através do AWS CloudFormation.
+* **Monitoramento Proativo:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) e acompanhamento de relatórios avançados de saúde (*Health checks*) e logs de servidores.
 * **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
 * **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
 * **Gerenciamento de Segredos:** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
