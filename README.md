@@ -14,7 +14,7 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 | **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3 |
 | **🌐 Redes & Integração** | Amazon API Gateway, Amazon SNS, Amazon SQS |
 | **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, AWS STS, IAM (Roles/Policies), Security Groups, Políticas de S3, AWS Budgets |
-| **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics, Health Checks) |
+| **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics, Health Checks, Logs) |
 | **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng`, Boto3 SDK, AWS CloudFormation |
 | **💻 Versionamento** | Git, GitHub, Markdown |
 
@@ -29,7 +29,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 03: Automação Serverless](./labs/03-automated-ec2-cleanup)** — Automatizando o fim de instâncias EC2 com Lambda em Python e EventBridge.
 
-🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tolerância a falhas.
+🔹 **[Lab 04: Amazon SNS e SQS](./labs/04-sns-sqs-dlq)** — Arquitetura desacoplada e mensageria assíncrona utilizando o padrão Fanout e Dead-Letter Queues (DLQ) para tratamento de falhas em filas de mensagens secundárias.
 
 🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão em arquiteturas serverless.
 
@@ -45,6 +45,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 11: AWS Elastic Beanstalk](./labs/11-aws-elastic-beanstalk-deployment)** — Provisionamento, gerenciamento e orquestração automatizada de aplicações web em modelo PaaS, controlando perfis de instância IAM e ciclo de vida de recursos.
 
+🔹 **[Lab 12: Arquitetura Fan-Out com SNS, SQS e Lambda](./labs/012-arquitetura-fanout-sns-sqs-lambda)** — Implementação de um ecossistema orientado a eventos (*Event-Driven*) para processamento de e-commerce, aplicando políticas avançadas de filtragem de assinatura no SNS, buffers de isolamento assíncronos em filas SQS e contenção de falhas com Dead-Letter Queues (DLQ).
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -52,18 +54,20 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 
 ⚙️ **Arquitetura & Computação**
 * **Ciclo de Vida Serverless:** Isolamento lógico de ambientes (Dev/Prod) utilizando *Stages* e *Aliases*, sem duplicar recursos físicos.
-* **Sistemas Desacoplados:** Aplicação de padrões de integração assíncrona (como *Fanout*) para alta resiliência.
+* **Sistemas Orientados a Eventos & Desacoplados:** Aplicação avançada do padrão *Fan-Out* com Amazon SNS e SQS para roteamento de payloads complexos em microsserviços paralelos, minimizando o acoplamento sistêmico e garantindo tolerância a falhas.
+* **Resiliência e Contenção:** Configuração de Dead-Letter Queues (DLQ) no SQS para tratamento, isolamento e auditoria de mensagens com falhas consecutivas de processamento.
 * **Abstração de Infraestrutura (PaaS):** Compreensão de como o AWS Elastic Beanstalk otimiza o tempo de deploy de aplicações (como Node.js), isolando servidores web em ambientes single instance com foco em eficiência operacional.
 
 🌐 **Integração Web & Dados**
 * **Aplicações Modernas:** Hospedagem estática no S3 e configuração de políticas de CORS no API Gateway.
 * **Modelagem NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs).
+* **Filtros Cirúrgicos de Mensageria:** Escrita de políticas de filtragem de assinatura (*Subscription Filter Policies*) em JSON para otimização de processamento computacional no SNS, garantindo o direcionamento seletivo de mensagens e gerando economia de custos de invocação da Lambda.
 
 📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
 * **Gerenciamento de Identidades Dinâmico:** Utilização do AWS STS para reduzir superfícies de ataque através do uso de tokens e chaves temporárias programáticas em substituição a credenciais de longo prazo estáticas.
-* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) em formato JSON para delimitar restritamente quais identidades podem assumir funções executivas, incluindo perfis de instâncias EC2 acoplados a plataformas de deploy.
+* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) e políticas de acesso a filas em formato JSON para delimitar restritamente o princípio do menor privilégio entre serviços integrados (como SNS publicando no SQS).
 * **Orquestração Subjacente:** Rastreabilidade e análise dos bastidores de provisionamento automatizado de recursos (Security Groups, EC2 e Elastic IPs) através do AWS CloudFormation.
-* **Monitoramento Proativo:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) e acompanhamento de relatórios avançados de saúde (*Health checks*) e logs de servidores.
+* **Monitoramento Proativo & Rastreamento:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) e consolidação de logs com Amazon CloudWatch Logs para inspeção e depuração de fluxos de execução serverless.
 * **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
 * **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
 * **Gerenciamento de Segredos:** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
