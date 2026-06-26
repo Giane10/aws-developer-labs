@@ -136,8 +136,28 @@ Utilize os dados abaixo na interface web para validar o comportamento do CRUD e 
 
 ---
 
-## 📸 Evidências do Laboratório (Critério de Avaliação)
+## 📸 Evidências de Implantação e Testes
 
-### 🖥️ Aplicação Web em Execução (100 pontos)
-*Evidência do Frontend carregado com sucesso através do Endpoint de site do Amazon S3, exibindo os 4 produtos populados via API e o nome de estudante visível no rodapé.*
-![Aplicação Web Serverless CRUD Funcionando](01-site-funcionando.png)
+Abaixo estão listadas as validações visuais de cada camada da infraestrutura serverless implantada:
+
+### 0. Arquitetura do Projeto
+Diagrama estrutural do fluxo de dados da aplicação.
+![Arquitetura](img/00-arquitetura.png)
+
+### 1. Frontend em Execução (Amazon S3)
+Interface web hospedada estaticamente, realizando operações de listagem e cadastro de produtos com sucesso.
+![Site Funcionando](img/01-site-funcionando.png)
+
+### 2. Configurações de Segurança (CORS)
+Restrições de compartilhamento de recursos configuradas no API Gateway para permitir requisições seguras vindas do S3.
+![Configuração de CORS](img/02-api-gateway-cors.png)
+
+### 3. Logs de Acesso da API (Amazon CloudWatch)
+Inspeção de requisições web em tempo real através do CloudWatch Logs, evidenciando chamadas bem-sucedidas (HTTP 200).
+![Logs do API Gateway](img/03-cloudwatch-api-logs.png)
+
+### 4. Ciclo de Vida da Função Serverless (AWS Lambda)
+Métricas de execução interna da função Lambda, detalhando tempo de computação e bilhetagem por invocação.
+![Logs da Lambda](img/04-cloudwatch-lambda-logs.png)
+
+---
