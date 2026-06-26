@@ -10,7 +10,7 @@ A solução utiliza uma interface estática (Frontend) hospedada de forma segura
 
 ## 🏗️ Arquitetura da Solução
 
-![Arquitetura do Sistema CRUD Serverless](arqui13.png)
+![Arquitetura do Sistema CRUD Serverless](img/00-arquitetura.png) 
 
 * **Camada de Apresentação (Frontend):** Interface web (HTML5, CSS3, JavaScript) hospedada em um Bucket do Amazon S3 configurado para Static Website Hosting.
 
@@ -140,9 +140,6 @@ Utilize os dados abaixo na interface web para validar o comportamento do CRUD e 
 
 Abaixo estão listadas as validações visuais de cada camada da infraestrutura serverless implantada:
 
-### 0. Arquitetura do Projeto
-Diagrama estrutural do fluxo de dados da aplicação.
-![Arquitetura](img/00-arquitetura.png)
 
 ### 1. Frontend em Execução (Amazon S3)
 Interface web hospedada estaticamente, realizando operações de listagem e cadastro de produtos com sucesso.
