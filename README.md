@@ -41,11 +41,11 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 09: Monitoramento, Alertas e Auditoria](./labs/09-cloudwatch-cloudtrail-monitoring)** — Implementação de observabilidade com alarmes estáticos no Amazon CloudWatch e notificações via Amazon SNS integrados a uma trilha de auditoria contínua via AWS CloudTrail armazenada no Amazon S3.
 
-🔹 **[Lab 10: AWS Security Token Service (STS)](./labs/010-aws-sts-temporary-credentials)** — Provisionamento e gerenciamento de credenciais temporárias efêmeras com Python/Boto3, assunção de papéis (Roles) e validação de políticas de confiança (Trust Relationships) sob o princípio do privilégio mínimo.
+🔹 **[Lab 10: AWS Security Token Service (STS)](./labs/10-aws-sts-temporary-credentials)** — Provisionamento e gerenciamento de credenciais temporárias efêmeras com Python/Boto3, assunção de papéis (Roles) e validação de políticas de confiança (Trust Relationships) sob o princípio do privilégio mínimo.
 
 🔹 **[Lab 11: AWS Elastic Beanstalk](./labs/11-aws-elastic-beanstalk-deployment)** — Provisionamento, gerenciamento e orquestração automatizada de aplicações web em modelo PaaS, controlando perfis de instância IAM e ciclo de vida de recursos.
 
-🔹 **[Lab 12: Arquitetura Fan-Out com SNS, SQS e Lambda](./labs/012-arquitetura-fanout-sns-sqs-lambda)** — Implementação de um ecossistema orientado a eventos (*Event-Driven*) para processamento de e-commerce, aplicando políticas avançadas de filtragem de assinatura no SNS, buffers de isolamento assíncronos em filas SQS e contenção de falhas com Dead-Letter Queues (DLQ).
+🔹 **[Lab 12: Arquitetura Fan-Out com SNS, SQS e Lambda](./labs/12-arquitetura-fanout-sns-sqs-lambda)** — Implementação de um ecossistema orientado a eventos (*Event-Driven*) para processamento de e-commerce, aplicando políticas avançadas de filtragem de assinatura no SNS, buffers de isolamento assíncronos em filas SQS e contenção de falhas com Dead-Letter Queues (DLQ).
 
 ---
 
