@@ -33,7 +33,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 05: AWS Lambda (Aliases) e API Gateway (Stages)](./labs/05-lambda-api-gateway)** — Gerenciamento de múltiplos ambientes (Desenvolvimento e Produção) com roteamento inteligente de tráfego e controle de versão em arquiteturas serverless.
 
-🔹 **[Lab 06: Aplicação Web Serverless](./labs/06-jogo-adivinhacao-aws-serverless)** — Integração ponta a ponta de um jogo de adivinhação web utilizando frontend estático no Amazon S3 acoplado a um backend dinâmico com API Gateway e AWS Lambda.
+🔹 **[Lab 06: Aplicação Web Serverless](./labs/06-jogo-adivinhacao-aws-serverless)** — Integration ponta a ponta de um jogo de adivinhação web utilizando frontend estático no Amazon S3 acoplado a um backend dinâmico com API Gateway e AWS Lambda.
 
 🔹 **[Lab 07: Amazon DynamoDB](./labs/07-amazon-dynamodb)** — Modelagem NoSQL com Índices Secundários Locais (LSI) e Globais (GSI), manipulação de arquivos JSON e carga em lote.
 
@@ -47,6 +47,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 12: Arquitetura Fan-Out com SNS, SQS e Lambda](./labs/12-arquitetura-fanout-sns-sqs-lambda)** — Implementação de um ecossistema orientado a eventos (*Event-Driven*) para processamento de e-commerce, aplicando políticas avançadas de filtragem de assinatura no SNS, buffers de isolamento assíncronos em filas SQS e contenção de falhas com Dead-Letter Queues (DLQ).
 
+🔹 **[Lab 13: Operação CRUD Serverless com DynamoDB e Python](./labs/13-lambda-crud-produtos-dynamodb)** — Construção de uma aplicação web full-stack serverless com frontend estático no Amazon S3 integrado via rotas HTTP estruturadas no Amazon API Gateway a um backend controlador em AWS Lambda (Python), realizando persistência dinâmica em tabelas NoSQL do Amazon DynamoDB.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -56,19 +58,21 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 * **Ciclo de Vida Serverless:** Isolamento lógico de ambientes (Dev/Prod) utilizando *Stages* e *Aliases*, sem duplicar recursos físicos.
 * **Sistemas Orientados a Eventos & Desacoplados:** Aplicação avançada do padrão *Fan-Out* com Amazon SNS e SQS para roteamento de payloads complexos em microsserviços paralelos, minimizando o acoplamento sistêmico e garantindo tolerância a falhas.
 * **Resiliência e Contenção:** Configuração de Dead-Letter Queues (DLQ) no SQS para tratamento, isolamento e auditoria de mensagens com falhas consecutivas de processamento.
+* **Aplicações Full-Stack Serverless:** Acoplamento completo de arquiteturas desacopladas de microsserviços, distribuindo regras de negócio lógicas e fluxos de dados ponta a ponta sem necessidade de gerenciar servidores subjacentes.
 * **Abstração de Infraestrutura (PaaS):** Compreensão de como o AWS Elastic Beanstalk otimiza o tempo de deploy de aplicações (como Node.js), isolando servidores web em ambientes single instance com foco em eficiência operacional.
 
 🌐 **Integração Web & Dados**
-* **Aplicações Modernas:** Hospedagem estática no S3 e configuração de políticas de CORS no API Gateway.
-* **Modelagem NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs).
+* **Aplicações Modernas & Hosting Estático:** Hospedagem estática altamente disponível e de baixo custo no S3 através do *Static Website Hosting*, roteamento assíncrono cliente-servidor e configuração granular de controle de acesso a recursos compartilhados (**CORS**).
+* **Modelagem e Persistência NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs), e manipulação programática de operações transacionais complexas de escrita, leitura, atualização e deleção (**CRUD**) via SDK `boto3`.
 * **Filtros Cirúrgicos de Mensageria:** Escrita de políticas de filtragem de assinatura (*Subscription Filter Policies*) em JSON para otimização de processamento computacional no SNS, garantindo o direcionamento seletivo de mensagens e gerando economia de custos de invocação da Lambda.
 
 📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
 * **Gerenciamento de Identidades Dinâmico:** Utilização do AWS STS para reduzir superfícies de ataque através do uso de tokens e chaves temporárias programáticas em substituição a credenciais de longo prazo estáticas.
-* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*) e políticas de acesso a filas em formato JSON para delimitar restritamente o princípio do menor privilégio entre serviços integrados (como SNS publicando no SQS).
+* **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*), perfis de execução específicos para serviços e políticas de privilégio mínimo em formato JSON, garantindo que a Lambda acesse estritamente escopos delimitados no DynamoDB e CloudWatch.
 * **Orquestração Subjacente:** Rastreabilidade e análise dos bastidores de provisionamento automatizado de recursos (Security Groups, EC2 e Elastic IPs) através do AWS CloudFormation.
-* **Monitoramento Proativo & Rastreamento:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`) e consolidação de logs com Amazon CloudWatch Logs para inspeção e depuração de fluxos de execução serverless.
+* **Monitoramento Proativo & Rastreamento:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`), auditoria de requisições HTTP em API Gateway e consolidação estruturada de grupos de logs no **Amazon CloudWatch Logs** para inspeção em tempo real e depuração de fluxos lógicos e códigos Python.
 * **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
+* **Políticas de Acesso Públicas e Seguras:** Engenharia de segurança e liberação controlada de recursos usando S3 Bucket Policies estruturadas via JSON com controle estrito de `Principal` e ações direcionadas (`GetObject`).
 * **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
 * **Gerenciamento de Segredos:** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
 * **Governança de Custos (FinOps):** Monitoramento financeiro proativo para manutenção de uma nuvem sustentável e eficiente.
