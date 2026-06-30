@@ -11,9 +11,9 @@ O objetivo deste repositório é consolidar o meu aprendizado em computação em
 | Categoria | Ferramentas |
 | :--- | :--- |
 | **☁️ Cloud & Serverless** | AWS, AWS Lambda (Python), AWS Elastic Beanstalk |
-| **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3 |
+| **🗄️ Dados & Armazenamento** | Amazon DynamoDB (NoSQL), Amazon S3, S3 Glacier Instant Retrieval |
 | **🌐 Redes & Integração** | Amazon API Gateway, Amazon SNS, Amazon SQS |
-| **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, AWS STS, IAM (Roles/Policies), Security Groups, Políticas de S3, AWS Budgets |
+| **🛡️ Segurança, Auditoria & FinOps** | AWS CloudTrail, AWS STS, IAM (Roles/Policies), Security Groups, Políticas de S3, S3 Server Access Logging, AWS Budgets |
 | **📊 Observabilidade & Alertas** | Amazon CloudWatch (Alarms, Metrics, Health Checks, Logs) |
 | **⚙️ Infraestrutura & Testes** | AWS CLI, CloudShell, User Data Scripts, `stress-ng`, Boto3 SDK, AWS CloudFormation |
 | **💻 Versionamento** | Git, GitHub, Markdown |
@@ -49,6 +49,8 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 13: Operação CRUD Serverless com DynamoDB e Python](./labs/13-lambda-crud-produtos-dynamodb)** — Construção de uma aplicação web full-stack serverless com frontend estático no Amazon S3 integrado via rotas HTTP estruturadas no Amazon API Gateway a um backend controlador em AWS Lambda (Python), realizando persistência dinâmica em tabelas NoSQL do Amazon DynamoDB.
 
+🔹 **[Lab 14: Amazon S3 Avançado - Versionamento, Ciclo de Vida e Logs](./labs/14-amazon-s3-lifecycle-versioning-logging)** — Implementação de estratégias de proteção de dados com Object Versioning (Delete Markers), automação de FinOps via Lifecycle Policies (transição para Glacier Instant Retrieval e deleção automática) e auditoria de requisições com Server Access Logging.
+
 ---
 
 ## 🧠 Aprendizados Consolidados
@@ -61,17 +63,18 @@ Competências aprimoradas para atuação na Engenharia de Nuvem, organizadas nos
 * **Aplicações Full-Stack Serverless:** Acoplamento completo de arquiteturas desacopladas de microsserviços, distribuindo regras de negócio lógicas e fluxos de dados ponta a ponta sem necessidade de gerenciar servidores subjacentes.
 * **Abstração de Infraestrutura (PaaS):** Compreensão de como o AWS Elastic Beanstalk otimiza o tempo de deploy de aplicações (como Node.js), isolando servidores web em ambientes single instance com foco em eficiência operacional.
 
-🌐 **Integração Web & Dados**
+🌐 **Integração Web, Dados & Armazenamento**
 * **Aplicações Modernas & Hosting Estático:** Hospedagem estática altamente disponível e de baixo custo no S3 através do *Static Website Hosting*, roteamento assíncrono cliente-servidor e configuração granular de controle de acesso a recursos compartilhados (**CORS**).
+* **Automação de Armazenamento & FinOps (S3):** Configuração de regras de *Lifecycle Policies* no Amazon S3 para a transição automática de dados de acesso frequente para classes econômicas (como o *Glacier Instant Retrieval*) e expiração programada de objetos, garantindo governança financeira sem intervenção manual.
 * **Modelagem e Persistência NoSQL:** Criação de tabelas com LSI e GSI no DynamoDB para otimizar desempenho e reduzir custos (RCUs), e manipulação programática de operações transacionais complexas de escrita, leitura, atualização e deleção (**CRUD**) via SDK `boto3`.
 * **Filtros Cirúrgicos de Mensageria:** Escrita de políticas de filtragem de assinatura (*Subscription Filter Policies*) em JSON para otimização de processamento computacional no SNS, garantindo o direcionamento seletivo de mensagens e gerando economia de custos de invocação da Lambda.
 
 📊 **Observabilidade, Segurança & Auditoria (DevSecOps)**
+* **Recuperação e Retenção de Dados:** Implementação de *Object Versioning* no Amazon S3, dominando a lógica de *Delete Markers* para proteger aplicações em produção contra exclusões e substituições acidentais de arquivos.
 * **Gerenciamento de Identidades Dinâmico:** Utilização do AWS STS para reduzir superfícies de ataque através do uso de tokens e chaves temporárias programáticas em substituição a credenciais de longo prazo estáticas.
 * **Mecanismos de Confiança IAM:** Estruturação e edição de políticas de confiança (*Trust Policies*), perfis de execução específicos para serviços e políticas de privilégio mínimo em formato JSON, garantindo que a Lambda acesse estritamente escopos delimitados no DynamoDB e CloudWatch.
-* **Orquestração Subjacente:** Rastreabilidade e análise dos bastidores de provisionamento automatizado de recursos (Security Groups, EC2 e Elastic IPs) através do AWS CloudFormation.
 * **Monitoramento Proativo & Rastreamento:** Configuração de alarmes baseados em limites de métricas críticas (como `CPUUtilization`), auditoria de requisições HTTP em API Gateway e consolidação estruturada de grupos de logs no **Amazon CloudWatch Logs** para inspeção em tempo real e depuração de fluxos lógicos e códigos Python.
-* **Rastreabilidade e Governança:** Provisionamento de trilhas de auditoria globais com CloudTrail para registro imutável de chamadas de API de segurança no S3.
+* **Auditoria Contínua e Logs de Acesso:** Rastreamento global de chamadas de API com **AWS CloudTrail** integrado ao S3, aliado à ativação do **Server Access Logging** para auditoria eventual e detalhada de requisições de armazenamento.
 * **Políticas de Acesso Públicas e Seguras:** Engenharia de segurança e liberação controlada de recursos usando S3 Bucket Policies estruturadas via JSON com controle estrito de `Principal` e ações direcionadas (`GetObject`).
 * **Higienização de Dados:** Aplicação de boas práticas de segurança na publicação de evidências de infraestrutura, com o correto mascaramento de Account IDs, e-mails e escopos de IPs públicos e privados.
 * **Gerenciamento de Segredos:** Centralização de credenciais sensíveis via SSM Parameter Store e criptografia em repouso controlada por chaves do AWS KMS sob o princípio do privilégio mínimo.
