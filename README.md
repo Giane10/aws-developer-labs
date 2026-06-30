@@ -49,7 +49,7 @@ Abaixo está a lista dos projetos e laboratórios desenvolvidos ao longo do prog
 
 🔹 **[Lab 13: Operação CRUD Serverless com DynamoDB e Python](./labs/13-lambda-crud-produtos-dynamodb)** — Construção de uma aplicação web full-stack serverless com frontend estático no Amazon S3 integrado via rotas HTTP estruturadas no Amazon API Gateway a um backend controlador em AWS Lambda (Python), realizando persistência dinâmica em tabelas NoSQL do Amazon DynamoDB.
 
-🔹 **[Lab 14: Amazon S3 Avançado - Versionamento, Ciclo de Vida e Logs](./labs/14-amazon-s3-lifecycle-versioning-logging)** — Implementação de estratégias de proteção de dados com Object Versioning (Delete Markers), automação de FinOps via Lifecycle Policies (transição para Glacier Instant Retrieval e deleção automática) e auditoria de requisições com Server Access Logging.
+🔹 **[Lab 14: Amazon S3 Avançado - Versionamento, Ciclo de Vida e Logs](./labs/14-s3-versioning-lifecycle-logs)** — Implementação de estratégias de proteção de dados com Object Versioning (Delete Markers), automação de FinOps via Lifecycle Policies (transição para Glacier Instant Retrieval e deleção automática) e auditoria de requisições com Server Access Logging.
 
 ---
 
